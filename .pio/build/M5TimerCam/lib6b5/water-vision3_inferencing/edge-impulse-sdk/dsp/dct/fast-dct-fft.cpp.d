@@ -1,0 +1,32 @@
+.pio/build/M5TimerCam/lib6b5/water-vision3_inferencing/edge-impulse-sdk/dsp/dct/fast-dct-fft.cpp.o: \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/fast-dct-fft.cpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/fast-dct-fft.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../kissfft/kiss_fft.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../kissfft/../../porting/ei_classifier_porting.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../returntypes.hpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../numpy.hpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../ei_vector.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../ei_alloc.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../memory.hpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../../porting/ei_classifier_porting.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/classifier/ei_aligned_malloc.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/classifier/../porting/ei_classifier_porting.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../config.hpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../numpy_types.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../returntypes.hpp \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../ei_utils.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../dct/fast-dct-fft.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../kissfft/kiss_fftr.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../kissfft/kiss_fft.h \
+ lib/water-vision3_inferencing/src/model-parameters/model_metadata.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/statistics_functions.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math_types.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/Core/Include/cmsis_compiler.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/Core/Include/cmsis_gcc.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math_memory.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/none.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/utils.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/basic_math_functions.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/fast_math_functions.h \
+ lib/water-vision3_inferencing/src/edge-impulse-sdk/dsp/dct/../memory.hpp

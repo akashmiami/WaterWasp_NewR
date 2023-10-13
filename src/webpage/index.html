@@ -1,0 +1,291 @@
+<html>
+
+<head>
+	<meta name=viewport content=width=device-width, initial-scale=1>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div align="center" class="tab">
+		<button class="tablinks" id="defaultOpen" onclick="openPage(event, 'home_page')"><span>Water
+				Wasp</span></button>
+		<button class="tablinks" onclick="openPage(event, 'network_page')"><span>Network</span></button>
+	</div>
+	<div id="home_page" class="tabcontent">
+	</div>
+	<div id="network_page" class="tabcontent">
+		<div id="app">
+			<div id="app-wrap">
+				<div id="wifi">
+					<div id="wifi-status">
+						<h2>Connected to:</h2>
+						<section id="connected-to">
+							<div class="ape">
+								<div class="w0">
+									<div class="pw"><span></span></div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<h2>Manual connect</h2>
+					<section id="manual_add">
+						<div class="ape">ADD (HIDDEN) SSID<div>
+					</section>
+					<h2>or choose a network...</h2>
+					<section id="wifi-list">
+					</section>
+				</div>
+				<div id="connect_manual">
+					<header>
+						<h1>Enter Details</h1>
+					</header>
+					<h2>Manual Connection</span></h2>
+					<section>
+						<input id="manual_ssid" type="text" placeholder="SSID" value="">
+						<input id="manual_pwd" type="password" placeholder="Password" value="">
+						<input id="manual_email" type="text" placeholder="Email" value="">
+						<select id="manual_timezone" type="text">
+							<option value="Europe/London">Europe/London</option>
+							<option value="Europe/Berlin">Europe/Berlin</option>
+							<option value="Europe/Helsinki">Europe/Helsinki</option>
+							<option value="Europe/Moscow">Europe/Moscow</option>
+							<option value="Asia/Dubai">Asia/Dubai</option>
+							<option value="Asia/Karachi">Asia/Karachi</option>
+							<option value="Asia/Dhaka">Asia/Dhaka</option>
+							<option value="Asia/Jakarta">Asia/Jakarta</option>
+							<option value="Asia/Manila">Asia/Manila</option>
+							<option value="Asia/Tokyo" selected>Asia/Tokyo</option>
+							<option value="Australia/Brisbane">Australia/Brisbane</option>
+							<option value="Pacific/Noumea">Pacific/Noumea</option>
+							<option value="Pacific/Auckland">Pacific/Auckland</option>
+							<option value="Atlantic/Azores">Atlantic/Azores</option>
+							<option value="America/Noronha">America/Noronha</option>
+							<option value="America/Araguaina">America/Araguaina</option>
+							<option value="America/Blanc-Sablon">America/Blanc-Sablon</option>
+							<option value="America/New_York">America/New_York</option>
+							<option value="America/Chicago">America/Chicago</option>
+							<option value="America/Denver">America/Denver</option>
+							<option value="America/Los_Angeles">America/Los_Angeles</option>
+							<option value="America/Anchorage">America/Anchorage</option>
+							<option value="Pacific/Honolulu">Pacific/Honolulu</option>
+							<option value="Pacific/Samoa">Pacific/Samoa</option>
+							<option value="Asia/Ho_Chi_Minh">Asia/Ho_Chi_Minh</option>
+						</select>
+					</section>
+					<div class="buttons">
+						<input id="manual_join" type="button" value="Join" data-connect="manual" />
+						<input id="manual_cancel" type="button" value="Cancel" />
+					</div>
+				</div>
+				<div id="connect">
+					<header>
+						<h1>Enter Password</h1>
+					</header>
+					<h2>Password for <span id="ssid-pwd"></span></h2>
+					<section>
+						<input id="pwd" type="password" placeholder="Password" value="">
+						<input id="email" type="text" placeholder="Email" value="">
+						<select id="timezone" type="text">
+							<option value="Europe/London">Europe/London</option>
+							<option value="Europe/Berlin">Europe/Berlin</option>
+							<option value="Europe/Helsinki">Europe/Helsinki</option>
+							<option value="Europe/Moscow">Europe/Moscow</option>
+							<option value="Asia/Dubai">Asia/Dubai</option>
+							<option value="Asia/Karachi">Asia/Karachi</option>
+							<option value="Asia/Dhaka">Asia/Dhaka</option>
+							<option value="Asia/Jakarta">Asia/Jakarta</option>
+							<option value="Asia/Manila">Asia/Manila</option>
+							<option value="Asia/Tokyo" selected>Asia/Tokyo</option>
+							<option value="Australia/Brisbane">Australia/Brisbane</option>
+							<option value="Pacific/Noumea">Pacific/Noumea</option>
+							<option value="Pacific/Auckland">Pacific/Auckland</option>
+							<option value="Atlantic/Azores">Atlantic/Azores</option>
+							<option value="America/Noronha">America/Noronha</option>
+							<option value="America/Araguaina">America/Araguaina</option>
+							<option value="America/Blanc-Sablon">America/Blanc-Sablon</option>
+							<option value="America/New_York">America/New_York</option>
+							<option value="America/Chicago">America/Chicago</option>
+							<option value="America/Denver">America/Denver</option>
+							<option value="America/Los_Angeles">America/Los_Angeles</option>
+							<option value="America/Anchorage">America/Anchorage</option>
+							<option value="Pacific/Honolulu">Pacific/Honolulu</option>
+							<option value="Pacific/Samoa">Pacific/Samoa</option>
+							<option value="Asia/Ho_Chi_Minh">Asia/Ho_Chi_Minh</option>
+						</select>
+					</section>
+					<div class="buttons">
+						<input id="join" type="button" value="Join" />
+						<input id="cancel" type="button" value="Cancel" />
+					</div>
+				</div>
+				<div id="connect-wait">
+					<header>
+						<h1>Please wait...</h1>
+					</header>
+					<h2>Connecting to <span id="ssid-wait"></span></h2>
+					<section>
+						<div id="loading">
+							<div class="spinner">
+								<div class="double-bounce1"></div>
+								<div class="double-bounce2"></div>
+							</div>
+							<p class="tctr"> Please wait, It can take up to 30s.</p>
+						</div>
+						<div id="connect-success">
+							<h3 id="connect-info" class="gr">Success!</h3>
+						</div>
+						<div id="connect-fail">
+							<h3 class="rd">Connection failed</h3>
+							<p class="tctr">Please double-check wifi password if any and make sure the access point has
+								signal.</p>
+						</div>
+					</section>
+					<div class="buttons">
+						<input id="ok-connect" type="button" value="OK" class="ctr" />
+					</div>
+				</div>
+				<div id="connect-details">
+					<div id="connect-details-wrap">
+						<header>
+							<h1></h1>
+						</header>
+						<h2></h2>
+						<section>
+							<div class="buttons">
+								<input id="disconnect" type="button" value="Disconnect" class="ctr" />
+							</div>
+						</section>
+						<h2>IP Address</h2>
+						<section>
+							<div class="ape brdb">IP Address:<div id="ip" class="fr"></div>
+							</div>
+							<div class="ape brdb">Subnet Mask:<div id="netmask" class="fr"></div>
+							</div>
+							<div class="ape">Default Gateway:<div id="gw" class="fr"></div>
+							</div>
+						</section>
+						<div class="buttons">
+							<input id="ok-details" type="button" value="OK" class="ctr" />
+						</div>
+					</div>
+					<div id="diag-disconnect" class="diag-box">
+						<div class="diag-box-win">
+							<p>Are you sure you would like to disconnect from this wifi?</p>
+							<div class="buttons">
+								<input id="no-disconnect" type="button" value="No" />
+								<input id="yes-disconnect" type="button" value="Yes" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function openPage(evt, page) {
+		let i, tabcontent, tablinks;
+
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		document.getElementById(page).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	function tConvert(time) {
+		time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+		if (time.length > 1) {
+			time = time.slice(1);
+			time[5] = +time[0] < 12 ? ' AM' : ' PM';
+			time[0] = +time[0] % 12 || 12;
+		}
+		return time.join('');
+	}
+
+	function getWaterData() {
+		let homePage = document.getElementById('home_page');
+		if (homePage.style.display == "none") {
+			return;
+		}
+
+		let template =
+			`<table align="center">
+	<tr>
+		<th>Date/Time</th>
+		<th>Time (m)</th>
+		<th>Gallons</th>
+	</tr>
+	WaterData
+</table>`
+
+		let xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (xhttp.readyState === 4) {
+				const data = JSON.parse(xhttp.response);
+				if (data && data.hasOwnProperty("register")) {
+					if (data["register"]) {
+						if (data.hasOwnProperty("record")) {
+							homePage.innerHTML = `<h3 align="center" style="color:blue;margin:20px;">~ Water Usage ~</h3>`;
+							let tgal = 0;
+							let ttime = 0;
+							let record = data["record"];
+							if (record.length == 0) {
+								template = template.replace("WaterData", "<tr><td>None</td><td>0</td><td>0</td></tr><tr><th>Total</th><th>0</th><th>0</th>");
+							}
+							else {
+								let wdata = ""
+								for (i = 0; i < record.length; i++) {
+									let t_sec = parseInt(record[i]["ttime"], 10);
+									let t_hhmmss = new Date(t_sec * 1000).toISOString().substring(14, 19);
+									tgal += parseFloat(record[i]["tgal"]);
+									ttime += t_sec;
+									wdata += `<tr><td>${record[i]["date"]} ${tConvert(record[i]["time"])}</td><td>${t_hhmmss}</td><td>${record[i]["tgal"]}</td></tr>`
+								}
+								wdata += `<tr><th>Total</th><th>${new Date(ttime * 1000).toISOString().substring(14, 19)}</th><th>${tgal.toFixed(2)}</th></tr>`
+								template = template.replace("WaterData", wdata);
+							}
+
+							homePage.innerHTML += `${template}`
+						}
+					}
+					else if (data.hasOwnProperty("WiFi")) {
+						if (data["WiFi"]) {
+							if (data.hasOwnProperty("utoken")) {
+								let xtoken = data["utoken"].replaceAll(":", "");
+								homePage.innerHTML =
+									`   <h3 align="center" style="color:blue;margin:20px;"><a href="${data["url"]}/Device?Email=${data["uemail"]}&Tkn=${data["utoken"]}">Click here or scan QR code</a></h3>
+    <h4 align="center" style="color:blue;margin:20px;"><img src="${data["url"]}/User/QRCode/${data["uid"]}_0_${xtoken}.jpg" alt="qr code" width="360" height="360"/></h4>`;
+							}
+							else {
+								homePage.innerHTML = `<h3 align=\"center\" style=\"color:blue;margin:20px;\">Wait...</h3>`;
+							}
+						}
+						else {
+							homePage.innerHTML = `<h3 align=\"center\" style=\"color:blue;margin:20px;\">Device not configured and in AP mode</h3>`;
+						}
+					}
+				}
+			}
+		}
+
+		xhttp.open("GET", `/waterdata`, true);
+		xhttp.send();
+	}
+
+	document.getElementById("defaultOpen").click();
+	setTimeout(getWaterData, 300);
+	setInterval(getWaterData, 2000);
+</script>
+
+<script async src="network.js"></script>
+
+</html>
